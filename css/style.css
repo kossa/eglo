@@ -10,6 +10,12 @@ img{max-width: 100%}
 
 h1, h2, h3, h4{font-family: 'Homenaje', sans-serif; }
 
+/*BTN*/
+.btn{font-family: "Homenaje", sans-serif;}
+.btn-success{font-size: 29px;color: #fff;background-color: #009949; box-shadow: 0 6px 0px #004521;border-radius: 0px;border: none;}
+.btn-success:hover{background-color: #018640;}
+.btn-success:active{margin-top: 6px;box-shadow: none}
+
 .read-all{float: right;color: #fff;font-size: 16px;margin-top: 35px;}
 .read-all:hover{color: #fff;}
 h2.section-title{font-size: 37px;margin-bottom: 40px;font-family: 'Homenaje', sans-serif; color: #fff;float: left;}
@@ -44,7 +50,8 @@ section#top a:first-of-type{margin-top: 10px;}
 .carousel-indicators li{background: url(../images/page.png) no-repeat center center;width: 27px;height: 32px;border: none;margin: 0;background-color: transparent;}
 .carousel-indicators .active{width: 27px;height: 32px; background-image:  url(../images/page-selected.png), url(../images/page.png); background-position: center 6px, center center; margin: 0;background-color: transparent;}
 .carousel-control.left, .carousel-control.right{-webkit-box-shadow: none;background-image: none; box-shadow: none;}
-.controller{text-align: center;position: absolute;top: 35%;background-color: #F7F7F7;left: -10px;border-radius: 100%;  width: 61px; height: 61px; line-height: 3.5;-webkit-box-shadow: 0 2px 5px rgba(0,0,0,0.2); box-shadow: 0 2px 5px rgba(0,0,0,0.2);}
+.controller{text-align: center;position: absolute;top: 35%;background-color: #F7F7F7;left: -10px;border-radius: 100%;  width: 61px; height: 61px; line-height: 3.5;-webkit-box-shadow: 0 2px 5px rgba(0,0,0,0.2); box-shadow: 0 2px 5px rgba(0,0,0,0.2);-webkit-transition: all 0.1s;-moz-transition: all 0.1s;-o-transition: all 0.1s;-ms-transition: all 0.1s;transition: all 0.1s;}
+.controller:active{box-shadow: none;margin-top: 5px;}
 .controller.right{left: auto; right: -10px;}
 .controller img{position: relative;left: -1px}
 .controller.right img{left: 3px}
@@ -114,6 +121,12 @@ section.products-list li a{display: inline-block;color: #575757;margin: 30px 0;}
 section.products-list li a img{max-width: 66%}
 section.products-list li a:hover{transform: translate(0px, -10px)  scale(1.05);}
 
+
+/*one-product*/
+section.one-product{padding: 50px 0;}
+section.one-product .slide{margin-top: 50px;}
+section.one-product .produst-title{margin: 0 0 10px;}
+section.one-product .carousel-inner{border: none;}
 
 /* Footer */
 #footer{background: #fff ;padding: 80px 0 0;}
