@@ -19,8 +19,13 @@ h2.section-title img{margin-right: 10px;width: 30px;}
 body.home-page{background: #FADC52 url(../images/bg-yellow.jpg);}
 body{-webkit-background-size: contain; background-size: contain; background-position: center top;background-repeat: no-repeat;}
 
+/*Top*/
+section#top{padding: 10px 0;}
+section#top ul{margin: 0;}
+section#top a{float: left;display: inline-block;color: #000;}
+section#top a:first-of-type{margin-top: 10px;}
+
 /* Menu */
-#header{margin-top: 30px;}
 #header .container{background-color: #F7F7F7;border-radius: 5px;box-shadow: 0 5px 5px #ebebeb}
 #header a.navbar-brand{ margin: 10px;padding: 0; height: initial;}
 #header .navbar-nav a{ font-family: 'Homenaje', sans-serif; font-size: 24px; color: #545454; padding: 9px 15px; margin: 20px 10px;border-radius: 25px; }
