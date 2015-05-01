@@ -25,6 +25,7 @@ h2.section-title img{margin-right: 10px;width: 30px;}
 body.home-page{background: #FADC52 url(../images/bg-yellow.jpg);}
 body.products-page{background-image: url(../images/header-green.png)}
 body.jeux-page{background-image: url(../images/header-red.png)}
+body.events-page{background-image: url(../images/header-blue.png)}
 body{-webkit-background-size: contain; background-size: contain; background-position: center top;background-repeat: no-repeat;}
 
 
@@ -144,6 +145,19 @@ section.game-list .element-item .wrapper{margin: 10px 10px 40px;}
 section.game-list .element-item h3{margin: 10px 0 5px;}
 section.game-list .element-item h4{margin: 0;font-family: Verdana, 'Lato', sans-serif; text-transform: capitalize;}
 
+
+/*featured-event*/
+section.featured-event{padding: 50px 0;overflow: hidden;}
+section.featured-event .thumb{width: 100%;}
+section.featured-event h3{padding: 20px 0;}
+section.featured-event h3.date{float: right;}
+
+
+/*past-events*/
+section.past-events h1{text-transform: capitalize;color: #5A85B1;}
+section.past-events h2{font-size: 20px;margin: 20px 0 15px;}
+
+
 /* Footer */
 #footer{background: #fff ;padding: 80px 0 0;}
 #footer a{color: #545454;}
@@ -177,6 +191,10 @@ section.game-list .element-item h4{margin: 0;font-family: Verdana, 'Lato', sans-
     section.gamme-list ul li{width: 45%;}
     section.products-list li{max-width: 45%;}
     section.game-list .element-item{width: 100%;}
+    section.featured-event h3{margin: 10px 0;padding: 0;}
+    section.featured-event h3.date{float: none;}
+    section.past-events .one-event h2{margin: 15px 0 10px;}
+    section.past-events .one-event{margin: 40px 0;}
 }
 
 @media screen and (max-width: 480px){
