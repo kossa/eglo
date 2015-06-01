@@ -27,7 +27,7 @@
     <![endif]-->
   </head>
 
-  <body class="products-page">
+  <body class="contact-page">
 
     <section id="top">
       <div class="container">
@@ -78,65 +78,37 @@
 
     <div id="content">
       <div class="container">
-        <h1 class="title"><img src="images/lego-product-black.png" alt=""> Tout les produits</h1>
+        <h1 class="title"><img src="images/contacts-black.png" alt=""> Contact</h1>
 
-        <section class="products-list">
-          <img src="images/gammes/classic-logo.png" alt="">
-
-          <ul class="list-inline">
-            <li>
-              <a href="#">
-                <img src="images/produits/01.png" alt="">
-                <h2 class="reference">10692</h2>
-                <h3 class="name">LEGO &reg; Creative Bricks</h3>
-              </a>
-            </li>
-            <li>
-              <a href="#">
-                <img src="images/produits/02.png" alt="">
-                <h2 class="reference">10692</h2>
-                <h3 class="name">LEGO &reg; Creative Bricks</h3>
-              </a>
-            </li>
-            <li>
-              <a href="#">
-                <img src="images/produits/03.png" alt="">
-                <h2 class="reference">10692</h2>
-                <h3 class="name">LEGO &reg; Creative Bricks</h3>
-              </a>
-            </li>
-            <li>
-              <a href="#">
-                <img src="images/produits/04.png" alt="">
-                <h2 class="reference">10692</h2>
-                <h3 class="name">LEGO &reg; Creative Bricks</h3>
-              </a>
-            </li>
-            <li>
-              <a href="#">
-                <img src="images/produits/04.png" alt="">
-                <h2 class="reference">10692</h2>
-                <h3 class="name">LEGO &reg; Creative Bricks</h3>
-              </a>
-            </li>
-            <li>
-              <a href="#">
-                <img src="images/produits/05.png" alt="">
-                <h2 class="reference">10692</h2>
-                <h3 class="name">LEGO &reg; Creative Bricks</h3>
-              </a>
-            </li>
-            <li>
-              <a href="#">
-                <img src="images/produits/06.png" alt="">
-                <h2 class="reference">10692</h2>
-                <h3 class="name">LEGO &reg; Creative Bricks</h3>
-              </a>
-            </li>
-          </ul>
-
+        <section class="contact">
+          <div class="row">
+            <div class="col-sm-6">
+              <form action="" id="form-contact">
+                <input type="text" class="form-control" placeholder="Nom">
+                <input type="text" class="form-control" placeholder="Prénom">
+                <input type="email" class="form-control" placeholder="Email">
+                <textarea class="form-control" rows="10" placeholder="Message..."></textarea>
+                <input type="submit" class="btn btn-success" value="Envoyer">
+              </form>
+            </div>
+            <div class="col-sm-6">
+              <iframe src="https://www.google.com/m aps/embed?pb=!1m18!1m12!1m3!1d3196.4448637811524!2d2.928661!3d36.759893999999996!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x128fbaa4ddcccc6f%3A0x48f1701a1cce19ce!2ssarl+New+Things+Company!5e0!3m2!1sen!2s!4v1430472516824" width="400" height="330" frameborder="0" style="border:0"></iframe>
+              <address>
+                Cité 320 Logements Bt. 26 No. 4 <br>
+                Chéraga, Alger <br>
+                Tél: +213 (0) 21 38 28 93 <br>
+                <a href="mailto:adjaid@newthingscompany.com">adjaid@newthingscompany.com</a>
+              </address>
+              <ul class="list-inline social-links">
+                <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
+                <li><a href="#"><i class="fa fa-google-plus"></i></a></li>
+                <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+                <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+                <li><a href="#"><i class="fa fa-youtube"></i></a></li>
+              </ul>
+            </div>
+          </div>
         </section>
-        
 
       </div>
     </div>
@@ -205,6 +177,67 @@
     <!-- Placed at the end of the document so the pages load faster -->
     <script src="js/jquery.js"></script>
     <script src="js/bootstrap.min.js"></script>
+    <script src="js/isotope.pkgd.min.js"></script>
     <script src="js/main.js"></script>
+    <script>
+      // external js: isotope.pkgd.js
+
+$( document ).ready( function() {
+  // init Isotope
+  var $container = $('.isotope').isotope({
+    itemSelector: '.element-item',
+    layoutMode: 'fitRows',
+    getSortData: {
+      name: '.name',
+      symbol: '.symbol',
+      number: '.number parseInt',
+      category: '[data-category]',
+      weight: function( itemElem ) {
+        var weight = $( itemElem ).find('.weight').text();
+        return parseFloat( weight.replace( /[\(\)]/g, '') );
+      }
+    }
+  });
+
+  // filter functions
+  var filterFns = {
+    // show if number is greater than 50
+    numberGreaterThan50: function() {
+      var number = $(this).find('.number').text();
+      return parseInt( number, 10 ) > 50;
+    },
+    // show if name ends with -ium
+    ium: function() {
+      var name = $(this).find('.name').text();
+      return name.match( /ium$/ );
+    }
+  };
+
+  // bind filter button click
+  $('#filters').on( 'click', 'button', function() {
+    var filterValue = $( this ).attr('data-filter');
+    // use filterFn if matches value
+    filterValue = filterFns[ filterValue ] || filterValue;
+    $container.isotope({ filter: filterValue });
+  });
+
+  // bind sort button click
+  $('#sorts').on( 'click', 'button', function() {
+    var sortByValue = $(this).attr('data-sort-by');
+    $container.isotope({ sortBy: sortByValue });
+  });
+  
+  // change is-checked class on buttons
+  $('.button-group').each( function( i, buttonGroup ) {
+    var $buttonGroup = $( buttonGroup );
+    $buttonGroup.on( 'click', 'button', function() {
+      $buttonGroup.find('.is-checked').removeClass('is-checked');
+      $( this ).addClass('is-checked');
+    });
+  });
+  
+});
+
+    </script>
   </body>
 </html>

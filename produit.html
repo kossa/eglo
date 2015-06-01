@@ -79,7 +79,6 @@
     <div id="content">
       <div class="container">
         <h1 class="title"><img src="images/lego-product-black.png" alt=""> Produits</h1>
-        <p>Exercitationem omnis illum excepturi, assumenda dolor, nostrum sequi facere fuga adipisci.</p>
 
         <section class="one-product">
           <div class="text-center">
@@ -93,7 +92,7 @@
               <div class="col-sm-9 col-sm-offset-1">
                 <div class="carousel-inner" role="listbox">
                   <div class="item active">
-                    <img src="images/produits/01.jpg">
+                    <img src="images/produits/slide1.png">
                   </div>
                   <div class="item">
                     <img src="images/produits/02.jpg">
@@ -117,7 +116,7 @@
               <p>Consectetur adipisicing elit. Dolorem asperiores provident ipsam tempora cum odio repudiandae voluptas quo? Sequi tempora adipisci sapiente, molestiae at explicabo esse iusto sint quas praesentium.</p>
             </div>
             <div class="col-sm-4">
-              <button class="btn btn-success btn-lg pull-right"><i class="fa fa-shopping-cart"></i> Ajouter au panier</button>
+              <button class="btn btn-success btn-lg pull-right" data-toggle="modal" data-target="#product-model"><i class="fa fa-shopping-cart"></i> Ajouter au panier</button>
             </div>
           </div>
 
@@ -185,7 +184,39 @@
       </div>
     </footer>
 
-    
+
+
+<!-- Modal -->
+<div class="modal fade" id="product-model" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+  <div class="modal-dialog modal-lg">
+    <div class="modal-content">
+      <div class="modal-header">
+        <img class="top left" src="images/popup-modal.png" alt="">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <p class="text-right">Logged In as <strong>Username</strong></p>
+      </div>
+      <div class="modal-body">
+        <div class="row">
+          <div class="col-sm-6">
+            <img src="images/produits/02.jpg">
+          </div>
+          <div class="col-sm-6">
+            <img src="images/gammes/classic-logo.png" alt="">
+            <h2>10692 LEGO ® Creative Bricks</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sunt inventore excepturi ex porro quae mollitia, nesciunt ipsa, similique ipsam assumenda aliquam dolores totam, enim omnis aspernatur itaque tenetur accusantium necessitatibus.Lorem ipsum dolor sit amet, consectetur adipisicing elit. Inventore nam ad, reprehenderit asperiores exercitationem distinctio quae vel illum? Blanditiis eveniet, asperiores dolores, culpa totam mollitia laudantium quam consequatur placeat eligendi.Lorem ipsum dolor sit amet, consectetur adipisicing elit. Libero, quasi temporibus recusandae dolores aliquam sunt quo, nisi minus laudantium quibusdam facere dignissimos atque odio. Saepe consequatur mollitia vitae impedit quisquam.</p>
+
+            <span class="price">12,000DZD</span>
+            <div class="clearfix"></div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
     <!-- Bootstrap core JavaScript
     ================================================== -->
     <!-- Placed at the end of the document so the pages load faster -->
