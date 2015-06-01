@@ -190,10 +190,11 @@ section.contact .social-links li:nth-of-type(5) a{color: #DC2F33;border-color: #
 
 
 /*models*/
+.modal{padding-top: 50px}
 .modal-header{border: none;}
 .modal-header .close{ -webkit-linear-gradient(#f5515f, #9f041b); background-image: linear-gradient(#f5515f, #9f041b);line-height: 0;width: 50px;height: 50px;text-align: center; opacity: 1;border-radius: 100%; box-shadow: 0 2px 4px #000; color: #fff;font-size: 36px;  margin-top: -40px; margin-right: -40px;border: 1px solid #474040;}
 .modal-body{padding: 0 30px 50px;position: relative;}
-.modal-body .login-form{padding-right: 30px;border-right: 1px solid #DCDCDC;}
+.modal-body .login-form{overflow: hidden;padding-right: 30px;padding-bottom: 30px;border-right: 1px solid #DCDCDC;}
 .modal-body h1{color: #3A6A9F;margin-bottom: 30px;}
 .modal-body h1 img{margin-right: 20px;}
 .modal-body label{line-height: 1.6;}
@@ -215,6 +216,8 @@ section.contact .social-links li:nth-of-type(5) a{color: #DC2F33;border-color: #
 @media screen and (max-width: 991px){
     section.gamme-list ul li{width: 30%;}
     section.game-list .element-item{width: 45%;}
+    #header .navbar-nav a{padding: 9px 15px;}
+
 }
 @media screen and (max-width: 767px){
     .navbar-toggle{background-color: #FF0000;}
@@ -241,6 +244,11 @@ section.contact .social-links li:nth-of-type(5) a{color: #DC2F33;border-color: #
 
     h1.title{font-size: 28px;}
     h1.title img{max-width: 30px}
+    #top{overflow: hidden;}
+    #logo{float: left;}
+    .modal-body img.bottom, .modal-header img.top.left{display: none;}
+    .modal-body .btn-primary img, .modal-body .login-form{display: none;}
+    .modal-body .img-product{margin-bottom: 30px;}
 }
 
 @media screen and (max-width: 480px){
