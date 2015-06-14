@@ -13,6 +13,7 @@
     <!-- Bootstrap core CSS -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
     <link href="css/font-awesome.min.css" rel="stylesheet">
+    <link href="css/bootstrap.offcanvas.min.css" rel="stylesheet">
 
     <!-- Custom styles for this template -->
     <link href="css/style.css" rel="stylesheet">
@@ -46,6 +47,7 @@
     
     <header id="header">
       
+
       <div class="navbar" role="navigation">
         <div class="container">
           <div class="navbar-header">
@@ -58,17 +60,23 @@
           </div>
           <div class="collapse navbar-collapse">
             <a class="navbar-brand hidden-xs" href="#"><img src="images/logo.png" alt=""></a>
-            <ul class="nav navbar-nav">
-              <li class="active"><a href="#">Produits</a></li>
-              <li><a href="#">Jeux</a></li>
-              <li><a href="#">Evenements</a></li>
-              <li><a href="#">Shop</a></li>
-              <li><a href="#">Contact</a></li>
-            </ul>
+            
+              <ul class="nav navbar-nav">
+                <li class="active"><a href="#">Produits</a></li>
+                <li><a href="#">Jeux</a></li>
+                <li><a href="#">Evenements</a></li>
+                <li><a href="#">Shop</a></li>
+                <li><a href="#">Contact</a></li>
+                <li class="dropdown" id="search-btn">
+                      <i class="fa fa-search"></i>
+                  </li>
+              </ul>
             <form action="" class="search form-inline">
               <button><i class="fa fa-search"></i></button>
-              <input type="text" class="form-control" name="search" value="">
+              <input type="text" class="form-control" name="search" value="" autofocus>
+              <a href="#" id="close-search"><i class="fa fa-times-circle"></i></a>
             </form>
+            <!--  -->
           </div><!--/.nav-collapse -->
         </div>
       </div>
@@ -169,28 +177,28 @@
         </div>
 
         <div class="row">
-          <div class="col-sm-3">
+          <div class="col-sm-3 col-xs-6">
             <div class="one-game">
               <img src="images/jeux/img-01.jpg" alt="">
               <h4 class="title">LEGO Ninjago</h4>
               <h5 class="category">Rush</h5>
             </div>
           </div>
-          <div class="col-sm-3">
+          <div class="col-sm-3 col-xs-6">
             <div class="one-game">
               <img src="images/jeux/img-01.jpg" alt="">
               <h4 class="title">LEGO Ninjago</h4>
               <h5 class="category">Rush</h5>
             </div>
           </div>
-          <div class="col-sm-3">
+          <div class="col-sm-3 col-xs-6">
             <div class="one-game">
               <img src="images/jeux/img-01.jpg" alt="">
               <h4 class="title">LEGO Ninjago</h4>
               <h5 class="category">Rush</h5>
             </div>
           </div>
-          <div class="col-sm-3">
+          <div class="col-sm-3 col-xs-6">
             <div class="one-game">
               <img src="images/jeux/img-01.jpg" alt="">
               <h4 class="title">LEGO Ninjago</h4>
@@ -281,7 +289,7 @@
     <footer id="footer">
       <div class="container">
         <div class="row menus">
-          <div class="col-sm-3">
+          <div class="col-sm-3 col-xs-6">
             <ul class="list-unstyled">
               <li><a href="#">Building Instructions</a></li>
               <li><a href="#">Missing Parts</a></li>
@@ -289,7 +297,7 @@
               <li><a href="#">Products Recalls</a></li>
             </ul>
           </div>
-          <div class="col-sm-3">
+          <div class="col-sm-3 col-xs-6">
             <ul class="list-unstyled">
               <li><a href="#">Building Instructions</a></li>
               <li><a href="#">Missing Parts</a></li>
@@ -297,7 +305,7 @@
               <li><a href="#">Products Recalls</a></li>
             </ul>
           </div>
-          <div class="col-sm-3">
+          <div class="col-sm-3 col-xs-6">
             <ul class="list-unstyled">
               <li><a href="#">Building Instructions</a></li>
               <li><a href="#">Missing Parts</a></li>
@@ -305,7 +313,7 @@
               <li><a href="#">Products Recalls</a></li>
             </ul>
           </div>
-          <div class="col-sm-3">
+          <div class="col-sm-3 col-xs-6">
             <ul class="list-unstyled">
               <li><a href="#">Building Instructions</a></li>
               <li><a href="#">Missing Parts</a></li>
@@ -395,6 +403,7 @@
     <!-- Placed at the end of the document so the pages load faster -->
     <script src="js/jquery.js"></script>
     <script src="js/bootstrap.min.js"></script>
+    <script src="js/bootstrap.offcanvas.min.js"></script>
     <script src="js/main.js"></script>
   </body>
 </html>

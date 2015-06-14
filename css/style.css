@@ -47,15 +47,18 @@ section#top a:first-of-type{margin-top: 10px;}
 
 /* Menu */
 #header .container{background-color: #F7F7F7;border-radius: 5px;box-shadow: 0 5px 0 #ebebeb}
+#header .navbar{min-height: 0;}
 #header a.navbar-brand{ margin: 10px;padding: 0; height: initial;}
-#header .navbar-nav a{ font-family: 'Homenaje', sans-serif; font-size: 24px; color: #545454; padding: 9px 25px; margin: 20px 10px;border-radius: 25px; }
-#header .navbar-nav .active a, #header .navbar-nav a:hover { color: #FDFDFD; background-image: background-image: -webkit-linear-gradient(#b4ec51, #429321); background-image: linear-gradient(#b4ec51, #429321);  text-shadow: 0px 1px 1px #000;}
-#header .search{float: right;margin-top: 17px;}
-#header .search button{border: none;background-color: transparent;font-size: 30px;color: #555555;}
-#header .search input[type="text"]{-webkit-box-shadow: none; position: relative; top: 3px; box-shadow: none;padding: 0; width: 0;border: none;-webkit-transition: all 0.3s;-moz-transition: all 0.3s;-o-transition: all 0.3s;-ms-transition: all 0.3s;transition: all 0.3s;}
+#header .navbar-nav{float: none;}
+#header .navbar-nav a{ font-family: 'Homenaje', sans-serif; font-size: 24px; color: #545454; padding: 9px 25px; margin: 20px 10px;border-radius: 25px; background-color: transparent;}
+#header .navbar-nav .active a, #header .navbar-nav a:hover , #header .navbar-nav a:focus{ color: #FDFDFD; background-image: background-image: -webkit-linear-gradient(#b4ec51, #429321); background-image: linear-gradient(#b4ec51, #429321);  text-shadow: 0px 1px 1px #000;}
 
-#header .search:hover{}
-#header .search:hover input[type="text"]{width: 200px;padding: 6px 12px;border: none;}
+
+#header #search-btn{font-size: 30px;float: right;margin-top: 20px;cursor: pointer;}
+#header .search{position: relative;display: none;}
+#header .search button{border: none;background-color: transparent;font-size: 20px;color: #555555;position: absolute;top: 4px;left: 10px;z-index: 999;}
+#header .search a#close-search{font-size: 20px;color: #555555;position: absolute;top: 4px;right: 10px;z-index: 999;}
+#header .search input[type="text"]{width: 100%;padding: 6px 12px 6px 50px;-webkit-box-shadow: none; position: relative; top: 3px; box-shadow: none;-webkit-transition: all 0.3s;-moz-transition: all 0.3s;-o-transition: all 0.3s;-ms-transition: all 0.3s;transition: all 0.3s;}
 
 /*slider*/
 .carousel .container{position: relative;}
@@ -184,7 +187,7 @@ section.contact .social-links li:nth-of-type(5) a{color: #DC2F33;border-color: #
 
 /* Footer */
 #footer{background: #fff ;padding: 80px 0 0;}
-#footer a{color: #545454;}
+#footer a{color: #545454; line-height: 1; margin-bottom: 15px; display: inline-block;}
 #footer .menus{margin-bottom: 50px;}
 #footer .big-image img{width: 100%;}
 
@@ -217,20 +220,24 @@ section.contact .social-links li:nth-of-type(5) a{color: #DC2F33;border-color: #
     section.gamme-list ul li{width: 30%;}
     section.game-list .element-item{width: 45%;}
     #header .navbar-nav a{padding: 9px 15px;}
-
+    section.ntc{padding: 50px 0 150px;}
 }
 @media screen and (max-width: 767px){
-    .navbar-toggle{background-color: #FF0000;}
+    .navbar-toggle{float: left;margin-top: -60px;margin-left: 10px;background-color: #F7F7F7;}
+    .navbar-toggle .icon-bar{background-color: #009849;padding: 1px 0;border-radius: 4px;}
+    section#top #logo{margin-left: 60px;}
     .navbar-toggle span{background-color: #F7F7F7;}
     #header .search{margin-top: 0; width: 100%;}
-    #header .search input[type="text"]{width: auto;float: left;margin-top: 10px;}
-    #header .search button{float: left;}
+    #header .navbar-collapse{overflow: hidden;}
+   
+    #header .container{background-color: transparent;box-shadow: none;}
+    #header .navbar-default{border: none;background-color: transparent;}
     .controller{top: 30%;}
     .controller.right{right: 0;}
     .controller.left{left: 0;}
     .jeux-section .one-game{text-align: center;margin-bottom: 50px;}
-    section.produits-aleatoires .products ul li{width: 50%;margin-bottom: 10px;}
-    section.produits-aleatoires .products ul li:last-of-type{margin-bottom: 0px;}
+    section.produits-aleatoires .products{box-shadow: none; border: none;}
+    section.produits-aleatoires .products ul li{width: 50%; margin-bottom: 10px; border-bottom: 20px solid #EAEAEA; margin: 0 -2px 30px;}
     #header .navbar-nav a{text-align: center;}
     section.line .container img.right{right: 0;}
     section.line .container img.left{left: 0;}
@@ -247,8 +254,12 @@ section.contact .social-links li:nth-of-type(5) a{color: #DC2F33;border-color: #
     #top{overflow: hidden;}
     #logo{float: left;}
     .modal-body img.bottom, .modal-header img.top.left{display: none;}
-    .modal-body .btn-primary img, .modal-body .login-form{display: none;}
+    .modal-body .btn-primary img{display: none;}
+    .modal-body .login-form{border: none;}
     .modal-body .img-product{margin-bottom: 30px;}
+
+    #header .search{display: block;}
+    #header #search-btn, #header #close-search{display: none;}
 }
 
 @media screen and (max-width: 480px){
@@ -259,4 +270,5 @@ section.contact .social-links li:nth-of-type(5) a{color: #DC2F33;border-color: #
     section.gamme-list ul li{width: 60%;}
     section.products-list li{max-width: 50%;}
     section.products-list li a img{ max-width: 100%;}
+    section#top #logo{float: none; width: 100%; text-align: center; margin: 0 0 10px;}
 }
